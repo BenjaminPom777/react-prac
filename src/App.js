@@ -30,11 +30,16 @@ const App = () => {
   ];
 
 
+  const addExpenseHandler = expense => {
+    console.log('in app.js')
+    console.log(expense)
+  }
+
   return (
     <Card className='expenses'>
-      <NewExpense />
-      <Expenses items={expenses}/>
-     
+      <NewExpense onAddExpense={addExpenseHandler} />
+      <Expenses items={expenses} />
+
 
       <h2>Lets get started</h2>
       <p>This is also visible!</p>
