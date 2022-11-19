@@ -1,6 +1,7 @@
 import './Expenses.css'
 import Card from './components/UI/Card'
 import ExpenseItem from './components/Expenses/ExpenseItem'
+import NewExpense from './components/NewExpense/NewExpense';
 
 const App = () => {
 
@@ -29,7 +30,7 @@ const App = () => {
 
   return (
     <Card className='expenses'>
-
+      <NewExpense />
       <ExpenseItem
         title={expenses[0].title}
         amount={expenses[0].amount}
