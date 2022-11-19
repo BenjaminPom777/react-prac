@@ -1,7 +1,9 @@
 import './Expenses.css'
 import Card from './components/UI/Card'
-import ExpenseItem from './components/Expenses/ExpenseItem'
+
 import NewExpense from './components/NewExpense/NewExpense';
+import Expenses from './components/Expenses/Expenses';
+
 
 const App = () => {
 
@@ -31,22 +33,8 @@ const App = () => {
   return (
     <Card className='expenses'>
       <NewExpense />
-      <ExpenseItem
-        title={expenses[0].title}
-        amount={expenses[0].amount}
-        date={expenses[0].date} />
-      <ExpenseItem
-        title={expenses[1].title}
-        amount={expenses[1].amount}
-        date={expenses[1].date} />
-      <ExpenseItem
-        title={expenses[2].title}
-        amount={expenses[2].amount}
-        date={expenses[2].date} />
-      <ExpenseItem
-        title={expenses[3].title}
-        amount={expenses[3].amount}
-        date={expenses[3].date} />
+      <Expenses items={expenses}/>
+     
 
       <h2>Lets get started</h2>
       <p>This is also visible!</p>
